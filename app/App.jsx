@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Router, IndexRoute, hashHistory } from 'react-router';
 
-
+import TodoApp from 'TodoApp';
 
 $(document).foundation();
 
@@ -10,7 +10,7 @@ $(document).foundation();
 require('style!css!sass!app/styles/app.scss');
 
 ReactDOM.render(
-  <p>Boilerplate 3 Project</p>
+  <TodoApp/>
   ,
   document.getElementById('app')
 );
