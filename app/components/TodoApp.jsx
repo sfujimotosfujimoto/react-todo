@@ -47,7 +47,7 @@ class TodoApp extends React.Component {
     let {todos} = this.state;
     return (
       <div>
-        <TodoSearch onSearch={this.handleSearch}/>
+        <TodoSearch onSearch={this.handleSearch.bind(this)}/>
         <TodoList todos={todos} />
         <AddTodo onAddTodo={this.handleAddTodo.bind(this)} />
       </div>

@@ -27,7 +27,7 @@ class AddTodo extends React.Component {
       <div>
         <form ref="form" onSubmit={this.handleSubmit.bind(this)} >
           <input type="text" ref="todoText" placeholder="Enter a todo"/>
-          <button className="button expanded">Start</button>
+          <button className="button expanded">Add Todo</button>
         </form>
       </div>
     );
