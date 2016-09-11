@@ -1,10 +1,6 @@
 import React from 'react';
 
 class AddTodo extends React.Component {
-
-
-
-
   handleSubmit(e) {
     e.preventDefault();
     let {onAddTodo} = this.props;
@@ -16,13 +12,9 @@ class AddTodo extends React.Component {
     } else {
       this.refs.todoText.focus();
     }
-
-
   }
 
-
   render() {
-
     return (
       <div>
         <form ref="form" onSubmit={this.handleSubmit.bind(this)} >
