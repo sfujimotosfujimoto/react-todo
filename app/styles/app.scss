@@ -6,6 +6,10 @@
 @include foundation-everything;
 
 // Components
+@import "components/_container";
+@import "components/page-title";
+@import "components/todo";
+
 
 body {
   font-family: Rockwell, "Gill Sans", sans-serif;
