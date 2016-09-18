@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as redux from 'redux';
+import {Provider} from 'react-redux';
+
 import { Route, Router, IndexRoute, hashHistory } from 'react-router';
 
 import TodoApp from 'TodoApp';
 
 import * as actions from './actions/actions';
-import configureStore from './store/configureStore';
+import {configureStore} from './store/configureStore';
 
 const store = configureStore();
 
@@ -24,7 +25,10 @@ $(document).foundation();
 require('style!css!sass!app/styles/app.scss');
 
 ReactDOM.render(
-  <TodoApp/>
+  <Provider store={store}>
+    <TodoApp/>
+  </Provider>
+
   ,
   document.getElementById('app')
 );
