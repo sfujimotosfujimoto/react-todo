@@ -31,13 +31,18 @@ describe('Reducers', () => {
     it('shold add new todo', () => {
       let action = {
         type: 'ADD_TODO',
-        text: 'walk the dog'
+        todo: {
+          id: 'abc123',
+          text: 'Something',
+          completed: false,
+          createdAt: 98798453
+        }
       };
 
       let res = reducers.todosReducer(df([]), df(action));
 
       expect(res.length).toEqual(1);
-      expect(res[0].text).toEqual(action.text);
+      expect(res[0]).toEqual(action.todo);
     });
 
 
