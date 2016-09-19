@@ -7,11 +7,7 @@ import TodoApp from 'TodoApp';
 import * as actions from './actions/actions';
 import TodoAPI from './api/TodoAPI';
 
-// import '../playground/firebase/index';
-
-
 import {configureStore} from './store/configureStore';
-
 const store = configureStore();
 
 store.subscribe(() => {

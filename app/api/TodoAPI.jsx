@@ -1,7 +1,4 @@
-
 import * as $ from 'jquery';
-
-
 
 class TodoAPI {
   static setTodos(todos) {
