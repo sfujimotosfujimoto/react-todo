@@ -1,9 +1,12 @@
 var webpack = require('webpack');
 var path = require('path');
 
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
+
 module.exports = {
   debug: true,
-  devtool: 'eval-source-map',
+  devtool: process.env.NODE_ENV === 'production' ? undefined : 'eval-source-map',
 
   entry: [
     'script!jquery/dist/jquery.min.js',
@@ -17,6 +20,11 @@ module.exports = {
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery'
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
     })
   ],
   output: {
